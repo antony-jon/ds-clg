@@ -1,0 +1,90 @@
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   /* char a[25]="Hello?World123";
+    char alp[25];
+    char num[25];
+    char sp[25];
+    int at=0;
+    int nt=0;
+    int st=0;
+    int t=0;
+    for(int i=0;i<14;i++)
+    {
+        t=a[i];
+        if(t>64)
+        {
+            alp[at]=a[i];
+            at++;
+        }
+        else if(t<58)
+        {
+            num[nt]=a[i];
+            nt++;
+        }
+        else{
+            sp[st]=a[i];
+            st++;
+        }
+    }
+    for(int i=0;i<at;i++)
+    {
+        printf("%c",alp[i]);
+    }
+    printf("\n");
+    for(int i=0;i<nt;i++)
+    {
+        printf("%c",num[i]);
+    }
+    printf("\n");
+    for(int i=0;i<st;i++)
+    {
+        printf("%c",sp[i]);
+    }
+
+    return 0;
+} */
+
+    char a[25]="Hello?world 123";
+    char alp[25];
+    char num[25];
+    char sp[25];
+    int at=0;
+    int nt=0;
+    int st=0;
+    for(int i=0; i<sizeof(a);i++)
+    {
+        if(isalpha(a[i]))
+        {
+            alp[at]=a[i];
+            at++;
+        }
+        else if(isdigit(a[i]))
+        {
+            num[nt]=a[i];
+            nt++;
+        }
+        else{
+            sp[st]=a[i];
+            st++;
+        }
+       
+    }
+     for(int i=0;i<at;i++)
+    {
+        printf("%c",alp[i]);
+    }
+    printf("\n");
+    for(int i=0;i<nt;i++)
+    {
+        printf("%c",num[i]);
+    }
+    printf("\n");
+    for(int i=0;i<st;i++)
+    {
+        printf("%c",sp[i]);
+    }
+}
