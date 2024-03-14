@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[]={1,1,1,1};
+    int sum=2;
+    int count=0;
+    int s=sizeof(arr)/4;
+    for(int i=0;i<(s-1);i++)
+    {
+        for(int k=i+1;k<s;k++)
+        {
+            if((arr[i]+arr[k])==sum)
+            {
+                count++;
+            }
+        }
+    }
+    printf("%d",count);
+}
